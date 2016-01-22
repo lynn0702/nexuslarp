@@ -1,12 +1,15 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using NexCharCore;
 
 namespace NexChar.Controllers
 {
     public class HomeController : Controller
     {
+        NexCharContext context = new NexCharContext();
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = context.Organizations.First().Name;
 
             return View();
         }

@@ -11,7 +11,7 @@ namespace NexCharCore.Models
         public string Name { get; set; }
         [Range(0,3)]
         public int Tier { get; set; }
-        [Key,MaxLength(5)]
+        [MaxLength(5)]
         public string Abbreviation { get; set; }
         public string Type { get; set; }
 
