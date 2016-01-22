@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B7BA11
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexchar.Documents", "Nexchar.Documents\Nexchar.Documents.csproj", "{98544CAB-485C-4060-957E-6E4E0C9C14EF}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -44,6 +46,10 @@ Global
 		{8BFA4281-02ED-40A9-9F1C-62546B777C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFA4281-02ED-40A9-9F1C-62546B777C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFA4281-02ED-40A9-9F1C-62546B777C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98544CAB-485C-4060-957E-6E4E0C9C14EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98544CAB-485C-4060-957E-6E4E0C9C14EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98544CAB-485C-4060-957E-6E4E0C9C14EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98544CAB-485C-4060-957E-6E4E0C9C14EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Constants\Classes.cs" />
     <Compile Include="Constants\SkillTypes.cs" />
+    <Compile Include="ContextManager.cs" />
     <Compile Include="IAuditable.cs" />
     <Compile Include="Migrations\201601221616120_InitialMigration.cs" />
     <Compile Include="Migrations\201601221616120_InitialMigration.Designer.cs">
