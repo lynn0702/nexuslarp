@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterService.cs" />
     <Compile Include="IBasicDocumentService.cs" />
+    <Compile Include="LogisticsService.cs" />
     <Compile Include="ResourceService.cs" />
     <Compile Include="SkillService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

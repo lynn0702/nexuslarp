@@ -9,7 +9,7 @@ namespace NexChar.Controllers
         NexCharContext context = new NexCharContext();
         public ActionResult Index()
         {
-            ViewBag.Title = context.Organizations.First().Name;
+            ViewBag.Title = "Nexus LARP";
 
             return View();
         }

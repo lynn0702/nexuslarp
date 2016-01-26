@@ -26,6 +26,9 @@ namespace Nexchar.Documents
         public string Description { get; set; }
         [DataMember(EmitDefaultValue = false, Name = "bgpCost")]
         public int BGPCost { get; set; }
-      
+        [DataMember(EmitDefaultValue = false, Name = "prereqs")]
+        public List<PrereqDocument> Prereqs { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "prohibited")]
+        public List<ProhitedDocument> Prohibited { get; set; }
     }
 }

@@ -8,21 +8,30 @@ using NexCharCore;
 
 namespace NexChar.APIControllers
 {
-    public class SkillsController : ApiController
+    public class CharacterController : ApiController
     {
-                private readonly SkillService _fullService;
+        
+        private readonly CharacterService _fullService;
 
-                public SkillsController(IContextManager contextManager)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="contextManager"></param>
+        public CharacterController(IContextManager contextManager)
         {
-            _fullService = new SkillService(contextManager);
+            _fullService = new CharacterService(contextManager);
         }
 
-        public IEnumerable<SkillDocument> GetFilteredList()
+        /// <summary>
+        /// Search for a Character Based on Parameters
+        /// </summary>
+        /// <returns>CharacterDocument</returns>
+        public IEnumerable<CharacterDocument> GetFilteredList()
         {
             return _fullService.GetFiltered((IReadOnlyCollection<KeyValuePair<string, string>>)Request.GetQueryNameValuePairs());
         }
 
-        public IHttpActionResult GetById(string id = null)
+        public IHttpActionResult GetById(int id = 0)
         {
 
             var unit = _fullService.Get(id);

@@ -28,6 +28,12 @@ namespace NexCharCore.Models
         [Range(0, 120)]
         public int BGPCost { get; set; }
 
+        [ForeignKey("Skill_SkillKey")]
+        public IList<PrerequisiteSkill> Prereqs { get; set; }
+
+        [ForeignKey("Skill_SkillKey")]
+        public IList<ProhibitedSkill> Prohibited { get; set; }
+            
         [NotMapped]
         private bool IsValidated { get; set; }
 

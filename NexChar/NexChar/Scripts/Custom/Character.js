@@ -1,0 +1,5 @@
+﻿var character;
+
+function getCharacter() {
+    
+}

@@ -45,6 +45,8 @@
     <Compile Include="IDocument.cs" />
     <Compile Include="OrganizationDocument.cs" />
     <Compile Include="PlayerDocument.cs" />
+    <Compile Include="PrereqDocument.cs" />
+    <Compile Include="ProhitedDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkillDocument.cs" />
   </ItemGroup>
