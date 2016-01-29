@@ -33,6 +33,10 @@ namespace NexCharCore.Models
 
         [ForeignKey("Skill_SkillKey")]
         public IList<ProhibitedSkill> Prohibited { get; set; }
+
+        public string Chart { get; set; }
+        [ForeignKey("Chart")]
+        public virtual Skill ChartKey { get; set; }
             
         [NotMapped]
         private bool IsValidated { get; set; }

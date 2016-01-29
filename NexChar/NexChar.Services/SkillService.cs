@@ -103,7 +103,8 @@ namespace NexChar.Services
                 Description = x.Description,
                 Prereqs = new List<PrereqDocument>(x.Prereqs.Select(p => new PrereqDocument{SkillKey = p.Skill_SkillKey, ID = p.ID, PrimaryRequirement = p.PrimaryRequirement_SkillKey, SecondaryRequirement = p.SecondaryRequirement_SkillKey})),
                 Prohibited = new List<ProhitedDocument>(x.Prohibited.Select(p => new ProhitedDocument { SkillKey = p.Skill_SkillKey, ID = p.ID, Prohibits = p.Prohibits_SkillKey})),
-                BGPCost = x.BGPCost
+                BGPCost = x.BGPCost,
+                Chart = x.Chart
             };
 
         public IEnumerable<SkillDocument> GetFiltered(IReadOnlyCollection<KeyValuePair<string, string>> queryString)

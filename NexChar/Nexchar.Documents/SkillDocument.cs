@@ -30,5 +30,7 @@ namespace Nexchar.Documents
         public List<PrereqDocument> Prereqs { get; set; }
         [DataMember(EmitDefaultValue = false, Name = "prohibited")]
         public List<ProhitedDocument> Prohibited { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "chart")]
+        public string Chart { get; set; }
     }
 }
