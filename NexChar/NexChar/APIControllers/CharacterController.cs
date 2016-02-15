@@ -43,7 +43,7 @@ namespace NexChar.APIControllers
         }
 
         [ActionName("createorupdate")]
-        public IHttpActionResult PostCreateorUpdate([FromBody] SkillDocument doc)
+        public IHttpActionResult PostCreateorUpdate([FromBody] CharacterDocument doc)
         {
             var returnDoc = _fullService.CreateOrUpdate(doc);
             if (returnDoc == null)

@@ -14,6 +14,8 @@ namespace NexCharCore.Models
         public int Event_ID { get; set; }
         [ForeignKey("Event_ID")]
         public virtual Event Event { get; set; }
+        public int SigsEarned { get; set; }
+        public int WorkTime { get; set; }
         public int NobleAlliedTo_ID { get; set; }
         [ForeignKey("NobleAlliedTo_ID")]
         public virtual Character NobleAlliedTo { get; set; }

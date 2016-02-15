@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="CharacterDocument.cs" />
     <Compile Include="CharacterSkillDocument.cs" />
+    <Compile Include="CheckoutDocument.cs" />
     <Compile Include="IDocument.cs" />
+    <Compile Include="LogisticsDocument.cs" />
     <Compile Include="OrganizationDocument.cs" />
     <Compile Include="PlayerDocument.cs" />
     <Compile Include="PrereqDocument.cs" />

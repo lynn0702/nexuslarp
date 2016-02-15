@@ -34,7 +34,7 @@ namespace NexCharCore.Models
             }
         }
 
-        public virtual IList<CharacterSkill> CharacterSkills { get; set; }
+        public virtual List<CharacterSkill> CharacterSkills { get; set; }
 
 
         public void AddOrganization(Organization organization)

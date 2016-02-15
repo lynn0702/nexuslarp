@@ -62,6 +62,10 @@ function buildSkillTree() {
     */
     buildCharts();
     addSkillsToCharts();
+    $("#accordionSkillTree").accordion({ heightStyle: "content" });
+    $('#accordionSkillTree').on('show hide', function () {
+            $(this).css('height', 'auto');
+            });
 }
 
 function addSkillsToCharts() {
@@ -69,30 +73,44 @@ function addSkillsToCharts() {
         if (skills[j].type === "ChartSkill") {
             var skillDiv = document.getElementById(skills[j].name + skills[j].chart);
             if (skillDiv) {
-                $(skillDiv).append('<li><input type="checkbox" value="None" id="' + skills[j].skillKey + '" name="check" /></li>');
+                $(skillDiv).append('<li><input type="checkbox" value="None" class="chartSkillCheckBox" id="' +skills[j].skillKey + '" name="check" /></li>');
                 var elems = $(skillDiv).children('li').remove();
                 elems.sort(function(a, b) {
                     return getSkill(a.firstChild.id).rank < getSkill(b.firstChild.id).rank;
                 });
                 $(skillDiv).append(elems);
             } else {
-                $(document.getElementById(skills[j].chart)).append('<div class="checkbox-grid" id ="' + skills[j].name + skills[j].chart + '" />' + skills[j].name + '</div>');
-                $(document.getElementById(skills[j].name + skills[j].chart)).append('<li><input type="checkbox" value="None" id="' + skills[j].skillKey + '" name="check" /></li>');
+                $(document.getElementById(skills[j].chart+'body')).append('<div class="checkbox-grid" id ="' + skills[j].name + skills[j].chart + '" />' + skills[j].name + '</div>');
+                $(document.getElementById(skills[j].name +skills[j].chart)).append('<li><input type="checkbox" value="None" class="chartSkillCheckBox" id="' +skills[j].skillKey + '" name="check" /></li>');
             }
         }
     }
 };
 
 function buildCharts() {
-    var skillTree = $("#skillTree");
+    var skillTree = $("#accordionSkillTree");
     for (var i = 0; i < grantedCharts.length; i++) {
-        skillTree.append('<div class="chart" id="' + grantedCharts[i].skillKey + '"> <h3>' + grantedCharts[i].name + '</h3></div>');
+        skillTree.append(
+                    '<h4>'+
+                         grantedCharts[i].name +
+                    '</h4>' +
+                    '<div id="' + grantedCharts[i].skillKey + '">' +
+                        '<div id="' + grantedCharts[i].skillKey + 'body">' +
+                        '</div>' +
+                    '</div>');
 
     }
     for (var j = 0; j < purchasedCharts.length; j++) {
-        skillTree.append('<div class="chart" id="' + purchasedCharts[j].skillKey + '"><h3> ' + purchasedCharts[j].name + ' ' + purchasedCharts[j].rank + '</h3></div>');
+            skillTree.append(
+                     '<h4>' +
+                            purchasedCharts[j].name + ' ' + purchasedCharts[j].rank +
+                     '</h4>' +
+                     '<div id="' + purchasedCharts[j].skillKey + '">' +
+                        '<div id="' + purchasedCharts[j].skillKey + 'body">'+
+                        '</div>' +
+                    '</div>');
     }
-   // $("#skillTree").accordion();
+   // $("#accordionSkillTree").accordion();
 }
 
 function difference(a1, a2) {
