@@ -1,0 +1,22 @@
+﻿.invoiceDetailHeader {
+    border-bottom: 1px dotted black;
+    color: black;
+    font-weight: bold;
+	width: 110px;
+	text-align: right;
+    display: inline-block;
+    font-size:13px;
+    padding: 5px;
+}
+.invoiceDetail {
+    display: inline-block;
+    width: 110px;
+	text-align: right;
+    padding: 2px 5px 2px 5px;
+}
+
+.invoiceDetailGrid {
+    background-color: whitesmoke;
+    width: 220px;
+    text-align: right;
+}

@@ -1,0 +1,38 @@
+﻿
+.searchgroupheader {
+    font-weight:bold 
+}
+.searchgroup {
+    padding-left: 50px;
+}
+
+.x-grid-tree-node-expanded .x-tree-icon-parent {
+    background: none;
+}
+.x-grid-tree-node-expanded .x-tree-icon {
+    background: none;
+}
+.node-depth-1-0 .x-grid-cell { 
+    background-color: lightgray; 
+}
+.node-depth-1-1 .x-grid-cell { 
+    background-color: white;
+}
+.node-depth-2-0 .x-grid-cell { 
+    background-color: rgb(147, 159, 171); 
+}
+.node-depth-2-1 .x-grid-cell { 
+    background-color: burlywood;
+}
+.node-depth-3-0 .x-grid-cell { 
+    background-color: lightgreen; 
+}
+.node-depth-3-1 .x-grid-cell { 
+    background-color: lemonchiffon;
+}
+.node-depth-4-0 .x-grid-cell { 
+    background-color: peachpuff; 
+}
+.node-depth-4-1 .x-grid-cell { 
+    background-color: powderblue;
+}

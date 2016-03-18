@@ -1,0 +1,18 @@
+﻿.x-panel-header-default {
+    background-image: none;
+    background-color: whitesmoke;
+}
+.x-toolbar-default {
+    background-color: whitesmoke;
+    background-image: none;
+}
+
+.x-column-header {
+    background-image:none;
+    border-right: 1px solid white;
+    background-color: #E8E8E8;
+}
+
+.x-column-header-last {
+    border-right: 0px;
+}

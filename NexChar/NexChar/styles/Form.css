@@ -1,0 +1,10 @@
+﻿.formPanel {
+    margin: 4px;
+}
+.appTitle {
+    color: #076540;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 4px;
+}

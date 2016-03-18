@@ -1,0 +1,37 @@
+﻿
+.toolButton
+{
+    font-weight:bold;
+    background-image:none;
+    border-color: lightgray;
+    
+        
+    background-color:white;
+
+
+    border-width: 1px;
+    border-radius: 0px;
+
+}
+    .aButton .x-btn-inner
+    {
+        color: lightgray;
+    }
+.toolButton:hover, aButton:active, aButton:focus
+{
+        background-color:white;
+        border-color: gray;
+}
+.x-btn.x-btn-default-small-disabled
+{
+    cursor:default;
+}
+.toolButton:hover.x-btn-default-small-disabled
+{
+   background-color:white; 
+}
+
+.x-form-readonly .x-form-checkbox {
+  background-image: url(/extjs/resources/ext-theme-classic/images/form/checkbox.gif);
+  opacity: 0.4;
+}

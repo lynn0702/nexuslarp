@@ -245,6 +245,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\AppState.js" />
+    <Content Include="app\controller\Admin.js" />
+    <Content Include="app\controller\App.js" />
+    <Content Include="app\controller\Character.js" />
+    <Content Include="app\model\Skill.js" />
+    <Content Include="app\model\Character.js" />
+    <Content Include="app\store\CharacterSearches.js" />
+    <Content Include="app\store\Skills.js" />
+    <Content Include="app\store\Characters.js" />
+    <Content Include="app\view\Admin\Navigation.js" />
+    <Content Include="app\view\App.js" />
+    <Content Include="app\view\Navigation.js" />
+    <Content Include="app\view\ResultCountDisplay.js" />
+    <Content Include="app\view\Character\Search.js" />
+    <Content Include="app\view\Character\SearchResults.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -281,9 +296,35 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="extensions\ClickableCell.js" />
+    <Content Include="extensions\ConfigurableCheckedValueCheckColumn.js" />
+    <Content Include="extensions\exporter\Base64.js" />
+    <Content Include="extensions\exporter\Button.js" />
+    <Content Include="extensions\exporter\csvFormatter\CsvFormatter.js" />
+    <Content Include="extensions\exporter\download.png" />
+    <Content Include="extensions\exporter\downloadify.min.js" />
+    <Content Include="extensions\exporter\downloadify.swf" />
+    <Content Include="extensions\exporter\excelFormatter\Cell.js" />
+    <Content Include="extensions\exporter\excelFormatter\ExcelFormatter.js" />
+    <Content Include="extensions\exporter\excelFormatter\Style.js" />
+    <Content Include="extensions\exporter\excelFormatter\Workbook.js" />
+    <Content Include="extensions\exporter\excelFormatter\Worksheet.js" />
+    <Content Include="extensions\exporter\Exporter.js" />
+    <Content Include="extensions\exporter\Formatter.js" />
+    <Content Include="extensions\exporter\swfobject.js" />
+    <Content Include="extensions\exporter\Usage.txt" />
+    <Content Include="extensions\exporter\wikiFormatter\WikiFormatter.js" />
+    <Content Include="extensions\form.Basic.js" />
+    <Content Include="extensions\IntField.js" />
+    <Content Include="extensions\ValidateWhenInvalidTextfield.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\save.gif" />
+    <Content Include="images\start32x32.png" />
+    <Content Include="overrides\BufferedRenderer.js" />
+    <Content Include="overrides\NumberField.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -305,6 +346,10 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="extensions\exporter\build" />
+    <Content Include="extensions\exporter\README.md" />
+    <Content Include="extensions\exporter\ServerSide\download.jsp" />
+    <Content Include="extensions\exporter\ServerSide\saveFile.jsp" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Custom\Character.js" />
     <Content Include="Scripts\Custom\Skills.js" />
@@ -320,7 +365,16 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Application\Index.aspx" />
+    <Content Include="styles\Button.css" />
+    <Content Include="styles\Detail.css" />
+    <Content Include="styles\Form.css" />
+    <Content Include="styles\headers.css" />
+    <Content Include="styles\Navigation.css" />
+    <Content Include="styles\PayableInvoiceGrid.css" />
+    <Content Include="styles\Search.css" />
+    <Content Include="NEXCHARAPP.js" />
+    <Content Include="Views\Home\Playground.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -333,7 +387,6 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

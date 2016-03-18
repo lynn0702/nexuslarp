@@ -1,0 +1,50 @@
+﻿<div class="jumbotron">
+    <h1>Skill Tree</h1>
+    <p class="lead">Explosions Pending!</p>
+    <ul style="list-style: none;">
+        <li>
+            <label for="skillslist">All Skills:</label>
+            <select name="skillslist" id="skillslist"></select>
+        </li>
+        <li>
+            <label for="raceslist">All Races:</label>
+            <select name="raceslist" id="raceslist"></select>
+        </li>
+
+        <li>
+            <label for="purchasedchartslist">All Charts:</label>
+            <select name="purchasedchartslist" id="purchasedchartslist"></select>
+        </li>
+
+        <li>
+            <label for="chartskilllist">All Chart Skills:</label>
+            <select name="chartskilllist" id="chartskilllist"></select>
+        </li>
+
+        <li>
+            <label for="grantedchartlist">All Granted Charts:</label>
+            <select name="grantedchartlist" id="grantedchartlist"></select>
+        </li>
+
+        <li>
+            <label for="hiddenprereqlist">All Hidden Prereqs:</label>
+            <select name="hiddenprereqlist" id="hiddenprereqlist"></select>
+        </li>
+
+        <li>
+            <label for="logisticsentrylist">All Logistics Entries:</label>
+            <select name="logisticsentrylist" id="logisticsentrylist"></select>
+        </li>
+    </ul>
+
+</div>
+<div class="bs-example" id="skillTree">
+    <div id="accordionSkillTree" class="chart">
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        getSkills();
+        addSkillsToCharts();
+    });
+</script>

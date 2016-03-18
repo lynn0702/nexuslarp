@@ -1,0 +1,30 @@
+﻿body {
+}
+.linkButton {
+    background-image: none;
+    border-width: 0px;
+    border-style: none;
+    background-color: transparent;
+
+}
+.linkButton .x-btn-inner {
+    color: #0000C0;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 120%;
+}
+.linkButton.x-btn-over .x-btn-inner {
+    color: #3399FF;
+    background-image: none;
+    text-decoration: underline;
+}
+.clickableCell {
+    color: #0000C0;
+}
+.clickableCell:hover {
+    cursor: pointer;
+    color: #3399FF;
+    text-decoration: underline;
+}
+.clickableCell.visitedCell {
+    color: red;
+}
