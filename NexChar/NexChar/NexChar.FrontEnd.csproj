@@ -181,6 +181,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIControllers\CharacterSkillController.cs" />
+    <Compile Include="APIControllers\OrganizationController.cs" />
+    <Compile Include="APIControllers\OrganizationMembershipController.cs" />
+    <Compile Include="APIControllers\PlayerController.cs" />
     <Compile Include="APIControllers\SkillsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -249,9 +253,17 @@
     <Content Include="app\controller\Admin.js" />
     <Content Include="app\controller\App.js" />
     <Content Include="app\controller\Character.js" />
+    <Content Include="app\model\CharacterSkill.js" />
+    <Content Include="app\model\Organization.js" />
+    <Content Include="app\model\OrganizationMembership.js" />
+    <Content Include="app\model\Player.js" />
     <Content Include="app\model\Skill.js" />
     <Content Include="app\model\Character.js" />
     <Content Include="app\store\CharacterSearches.js" />
+    <Content Include="app\store\CharacterSkills.js" />
+    <Content Include="app\store\OrganizationMemberships.js" />
+    <Content Include="app\store\Organizations.js" />
+    <Content Include="app\store\Player.js" />
     <Content Include="app\store\Skills.js" />
     <Content Include="app\store\Characters.js" />
     <Content Include="app\view\Admin\Navigation.js" />

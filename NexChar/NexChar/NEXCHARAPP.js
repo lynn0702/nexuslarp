@@ -66,18 +66,7 @@ Ext.application({
             ]
         });
     },
-    getOrgUnit: function (orgID) {
-        var me = this;
-        var store = me.getOrganizationalUnitDictionaryStore();
-
-        return store.getById(orgID);
-    },
-    getPayer1099: function (payerID) {
-        var me = this;
-        var store = me.getPayer1099Store();
-
-        return store.getById(payerID);
-    }, setHistoryTracking: function () {
+     setHistoryTracking: function () {
         this.appState = new Ext.ux.AppState();
         Ext.util.History.init();
     },

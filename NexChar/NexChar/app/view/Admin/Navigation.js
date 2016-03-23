@@ -20,17 +20,6 @@
     initComponent: function () {
         Ext.apply(this, {
             items: [
-                {
-                    title: 'Manage Payer 1099s',
-                    view: 'payerslist',
-                    name: 'payerslist',
-                    hidden: false,
-                    permission: 'AdminVendor1099s',
-                    header: {
-                        cls: 'navheader',
-                        view: 'payerslist'
-                    }
-                }
             ]
         }
         );

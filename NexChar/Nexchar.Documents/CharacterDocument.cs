@@ -36,8 +36,8 @@ namespace Nexchar.Documents
         public bool HasUsedChartDiscount { get; set; }
         [DataMember(EmitDefaultValue = false, Name = "hasAppliedStartingRacials")]
         public bool HasAppliedStartingRacials { get; set; }
-        [DataMember(EmitDefaultValue = false, Name = "organizationDocuments")]
-        public List<OrganizationDocument> OrganizationDocuments{ get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "organizationMembershipDocuments")]
+        public List<OrganizationMembershipDocument> OrganizationMembershipDocuments{ get; set; }
         [DataMember(EmitDefaultValue = false, Name = "characterSkillDocuments")]
         public virtual IList<CharacterSkillDocument> CharacterSkillDocuments { get; set; }
     }

@@ -3,7 +3,7 @@
     border: 0,
     alias: 'widget.charactersearchresults',
     store: 'CharacterSearches',
-    title: '1099 Search Results',
+    title: 'Character Search Results',
     hideCollapseTool: true,
     forceFit: true,
     plugins: [

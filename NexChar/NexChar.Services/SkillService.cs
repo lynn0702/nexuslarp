@@ -109,23 +109,11 @@ namespace NexChar.Services
 
         public IEnumerable<SkillDocument> GetFiltered(IReadOnlyCollection<KeyValuePair<string, string>> queryString)
         {
+            //ToDo examine querystring params to build query
             var dbSkillQuery = _nexCharContext.Skills
                 .Include(s => s.Prereqs)
                 .Include(s => s.Prohibited)
                 .AsNoTracking().AsQueryable();
-
-            //AddVendorNumberToQuery(queryString, ref dbTaxEntityQuery);
-            //AddTaxNumberToQuery(queryString, ref dbTaxEntityQuery);
-            //AddW9NameToQuery(queryString, ref dbTaxEntityQuery);
-            //AddStateIDToQuery(queryString, ref dbTaxEntityQuery);
-            //AddCityToQuery(queryString, ref dbTaxEntityQuery);
-            //Add1099TypeToQuery(queryString, ref dbTaxEntityQuery);
-            //AddTaxEntityTypeToQuery(queryString, ref dbTaxEntityQuery);
-
-            // var matchingVendors1099s = dbTaxEntityQuery.ToList();
-
-            //AddYearToResults(queryString, ref dbTaxEntityQuery);
-
 
             return dbSkillQuery.ToList().Select(s => AsDocument(s));
         }

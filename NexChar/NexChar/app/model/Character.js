@@ -2,7 +2,7 @@
     extend: 'Ext.data.Model',
     proxy: {
         type: 'ajax',
-        url: '/api/skills/getfilteredlist',
+        url: '/api/character',
         reader: {
             type: 'json'
         },
@@ -24,7 +24,7 @@
 ,"chosenClass"
 ,"hasUsedChartDiscount"
 ,"hasAppliedStartingRacials"
-,"organizationDocuments"
+, "organizationMembershipDocuments"
 ,"characterSkillDocuments"
     ],
     idProperty: 'id'

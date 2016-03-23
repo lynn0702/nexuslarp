@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Nexchar.Documents;
 using NexCharCore;
-using NexCharCore.Constants;
 using NexCharCore.Models;
 
 namespace NexChar.Services
@@ -150,6 +147,26 @@ namespace NexChar.Services
                             .Contains(p.PrimaryRequirement_SkillKey) &&
                         character.CharacterSkills.Select(cs => cs.Skill_SkillKey)
                             .Contains(p.SecondaryRequirement_SkillKey));
+        }
+
+        public List<CharacterSkillDocument> CreateOrUpdateSkills(List<CharacterSkillDocument> docs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<CharacterSkillDocument> GetSkillsByCharacter(int i)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<OrganizationMembershipDocument> CreateOrUpdateOrganizationMemberships(List<OrganizationMembershipDocument> docs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<OrganizationMembershipDocument> GetOrganizationMembershipsByCharacter(int p)
+        {
+            throw new NotImplementedException();
         }
     }
 }

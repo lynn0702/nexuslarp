@@ -3,7 +3,7 @@ using Nexchar.Documents;
 
 namespace NexChar.Services
 {
-    public interface IBasicDocumentService<T>
+    public interface IBasicDocumentService<out T>
      where T : class, IDocument, new()
     {
         T Get(string modelID);

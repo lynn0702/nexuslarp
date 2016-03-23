@@ -46,6 +46,7 @@
     <Compile Include="IDocument.cs" />
     <Compile Include="LogisticsDocument.cs" />
     <Compile Include="OrganizationDocument.cs" />
+    <Compile Include="OrganizationMembershipDocument.cs" />
     <Compile Include="PlayerDocument.cs" />
     <Compile Include="PrereqDocument.cs" />
     <Compile Include="ProhitedDocument.cs" />

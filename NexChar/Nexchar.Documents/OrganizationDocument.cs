@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace Nexchar.Documents
 {
-    //TODO Complete
     [DataContract]
     public class OrganizationDocument : IDocument
     {
+        [DataMember(EmitDefaultValue = false, Name = "name")]
+        public string Name { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "tier")]
+        public int Tier { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "abbreviation")]
+        public string Abbreviation { get; set; }
+        [DataMember(EmitDefaultValue = false, Name = "type")]
+        public string Type { get; set; }
     }
 }
