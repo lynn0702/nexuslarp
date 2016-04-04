@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -268,6 +269,7 @@
     <Content Include="app\store\Characters.js" />
     <Content Include="app\view\Admin\Navigation.js" />
     <Content Include="app\view\App.js" />
+    <Content Include="app\view\Character\SkillChart.js" />
     <Content Include="app\view\Navigation.js" />
     <Content Include="app\view\ResultCountDisplay.js" />
     <Content Include="app\view\Character\Search.js" />

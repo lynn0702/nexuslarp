@@ -50,16 +50,6 @@ function getSkill(skillKey) {
 
 
 function buildSkillTree() {
-    /*
-    Chart ->  Input Bubble Single
-        Skill bubble per rank
-
-        first pass -> all skills whose Primary or Secondary Requirement is in list of charts.
-        if ($(selector).length)
-        2nd Pass -> all remaining skills
-    div ID=skillName
-    input ID=skillKey
-    */
     buildCharts();
     addSkillsToCharts();
     $("#accordionSkillTree").accordion({ heightStyle: "content" });

@@ -3,7 +3,8 @@
     views: [
         'App',
         'ResultCountDisplay',
-        'Navigation'
+        'Navigation',
+        'character.SkillChart'
     ],
     stores: ['Skills'],
     refs: [
@@ -40,6 +41,7 @@
             unmaskcontent: this.onUnmaskContent,
             scope: this
         });
+        this.getSkillsStore().addListener('load', this.onSkillsLoad, this);
         this.control({
 
             'app': {
@@ -200,5 +202,65 @@
                 }
             }
         }
+    },
+    onSkillsLoad: function (store, records, successful) {
+        var me = this;
+        if (successful) {
+            $.each(records, function() {
+                switch (this.data.type) {
+                    case "Granted Chart":
+                        var newChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
+                        {
+                            title: this.data.name,
+                            id: this.data.skillKey
+                        });
+
+                        me.getMainContent().items.add(newChart);
+                        break;
+                    //case "HiddenPrereq":
+                    //    $("#hiddenprereqlist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
+                    //    break;
+                    //case "Logistics Entry":
+                    //    $("#logisticsentrylist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
+                    //    break;
+                    case "Purchased Chart":
+                        var newChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
+                        {
+                            title: this.data.name +' '+ this.data.rank,
+                            id: this.data.skillKey
+                        });
+
+                        me.getMainContent().items.add(newChart);
+                        break;
+                    //case "Race":
+                    //    $("#raceslist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
+                    //    break;
+                    default:
+                }
+
+            });
+        }
+
+        me.getMainContent().doLayout();
+        $.each(records, function () {
+            switch (this.data.type) {
+                case "ChartSkill":
+                    var newSkill = Ext.create('Ext.form.field.Checkbox',
+                    {
+                        fieldLabel: this.data.rank > 0 ? this.data.name + ' ' + this.data.rank : this.data.name,
+                        labewidth: 250,
+                        id: this.data.skillKey
+                    });
+                    if (Ext.getCmp(this.data.chart)) {
+                        Ext.getCmp(this.data.chart).items.add(newSkill);
+                    } else {
+                        alert(this.data.skillKey + ' is missing a chart value ');
+                    }
+                
+                    break;
+                default:
+            }
+        });
+        me.getMainContent().doLayout();
     }
 });
