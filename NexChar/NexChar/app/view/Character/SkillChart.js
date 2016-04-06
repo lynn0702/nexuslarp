@@ -2,18 +2,20 @@
     extend: 'Ext.form.Panel',
     alias: 'widget.skillchart',
     layout: {
-        type: 'vbox'
+        type: 'vbox'//,
+      //  align: 'stretch'
     },
-    defaults: {
-        labelWidth: 200,
-        padding: 1
-    },
-    flex: 1,
+    width: '100%',
+    height: '100%',
+    autoScroll: true,
+    padding:1,
     collapsible: true,
     collapsed: true,
     animCollapse: false,
     titleCollapse: true,
-    listeners: {
+    
+        border: 1
+    ,listeners: {
         beforeexpand: {
             fn: function(){ this.doLayout()}
         }

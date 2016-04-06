@@ -37,7 +37,8 @@
                      type:'fit'
                  },
                  flex: 0,
-                 border: 1
+                 border: 1,
+                 items:[{xtype: 'characterpanel', id: 'characterPanel'}]
              },
              {
                      xtype: 'panel',
@@ -49,8 +50,11 @@
                      titleCollapse: true,
                      collapsible: true,
                      animCollapse: false,
+                    collapsed: true,
                      flex: 1,
-                     border: 1
+                     border: 1,
+                     width: '80%',
+                     height: '100%'
               }
                 
             ]

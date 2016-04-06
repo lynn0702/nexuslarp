@@ -115,7 +115,11 @@ namespace NexChar.Services
                 .Include(s => s.Prohibited)
                 .AsNoTracking().AsQueryable();
 
-            return dbSkillQuery.ToList().Select(s => AsDocument(s));
+            return dbSkillQuery
+                .ToList()
+                .Select(s => AsDocument(s))
+                .OrderBy(s => s.Type)
+                .ThenBy(s => s.Rank);
         }
     }
 }

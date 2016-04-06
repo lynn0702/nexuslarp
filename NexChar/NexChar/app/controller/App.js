@@ -1,21 +1,30 @@
 ﻿Ext.define('NexChar.FrontEnd.controller.App', {
-    extend: 'Ext.app.Controller',
-    views: [
-        'App',
-        'ResultCountDisplay',
-        'Navigation',
-        'character.SkillChart'
-    ],
-    stores: ['Skills'],
-    refs: [
+        extend: 'Ext.app.Controller',
+        views: [
+            'App',
+            'ResultCountDisplay',
+            'Navigation',
+            'character.SkillChart',
+            'character.CharacterPanel'
+        ],
+        stores: ['Skills'],
+        refs: [
         {
             selector: '#mainContent',
             ref: 'mainContent'
         },
-                {
-                    selector: '#westContent',
-                    ref: 'westContent'
-                },
+        {
+            selector: '#centerContent',
+            ref: 'centerContent'
+        },
+        {
+            selector: '#characterPanel',
+            ref: 'characterPanel'
+        },
+        {
+            selector: '#westContent',
+            ref: 'westContent'
+        },
         {
             selector: '[name=navigationcontent]',
             ref: 'navigationContent'
@@ -209,13 +218,13 @@
             $.each(records, function() {
                 switch (this.data.type) {
                     case "Granted Chart":
-                        var newChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
+                        var newGrantedChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
                         {
                             title: this.data.name,
                             id: this.data.skillKey
                         });
 
-                        me.getMainContent().items.add(newChart);
+                        me.getCharacterPanel().add(newGrantedChart);
                         break;
                     //case "HiddenPrereq":
                     //    $("#hiddenprereqlist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
@@ -224,13 +233,22 @@
                     //    $("#logisticsentrylist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
                     //    break;
                     case "Purchased Chart":
-                        var newChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
+                        var newPurchasedChart = Ext.create('NexChar.FrontEnd.view.character.SkillChart',
                         {
                             title: this.data.name +' '+ this.data.rank,
                             id: this.data.skillKey
                         });
 
-                        me.getMainContent().items.add(newChart);
+                        if (Ext.getCmp(this.data.name)) {
+                            Ext.getCmp(this.data.name).add(newPurchasedChart);
+                        } else {
+                            me.getCharacterPanel().add(Ext.create('NexChar.FrontEnd.view.character.CharacterPanel',
+                            {
+                                title: this.data.name,
+                                id: this.data.name
+                            })).add(newPurchasedChart);
+                        }
+
                         break;
                     //case "Race":
                     //    $("#raceslist").append('<option class="dropdown-item"  data-toggle="tooltip" data-placement="bottom" title="' + this.description + '">' + this.name + '</option>');
@@ -241,18 +259,30 @@
             });
         }
 
-        me.getMainContent().doLayout();
+        me.getCharacterPanel().doLayout();
         $.each(records, function () {
             switch (this.data.type) {
                 case "ChartSkill":
                     var newSkill = Ext.create('Ext.form.field.Checkbox',
                     {
-                        fieldLabel: this.data.rank > 0 ? this.data.name + ' ' + this.data.rank : this.data.name,
-                        labewidth: 250,
                         id: this.data.skillKey
                     });
-                    if (Ext.getCmp(this.data.chart)) {
-                        Ext.getCmp(this.data.chart).items.add(newSkill);
+                    if (Ext.getCmp(this.data.chart) && Ext.getCmp(this.data.name + this.data.chart)) {
+                        Ext.getCmp(this.data.name + this.data.chart).add(newSkill);
+                    } else if (Ext.getCmp(this.data.chart) && !Ext.getCmp(this.data.name + this.data.chart)) {
+                        Ext.getCmp(this.data.chart).add(Ext.create('Ext.form.CheckboxGroup',
+                        {
+                            fieldLabel: this.data.name,
+                            labelWidth: 200,
+                            id: this.data.name + this.data.chart,
+                            width: '100%',
+                            columnWidth: 15,
+                            columns: 40,
+                            height: 40,
+                            padding: 0,
+                            border: 1
+                        }));
+                        Ext.getCmp(this.data.name + this.data.chart).add(newSkill);
                     } else {
                         alert(this.data.skillKey + ' is missing a chart value ');
                     }
@@ -261,6 +291,6 @@
                 default:
             }
         });
-        me.getMainContent().doLayout();
+        me.getCharacterPanel().doLayout();
     }
 });
